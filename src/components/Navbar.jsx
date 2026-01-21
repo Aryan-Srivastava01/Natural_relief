@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -38,13 +39,29 @@ export default function Navbar() {
         <li onClick={() => scrollToSection("testimonials")}>Reviews</li>
       </ul>
 
-      {/* CTA */}
-      <button
-        onClick={() => navigate("/hair-test")}
-        className="bg-green-700 text-green-200 font-bold px-5 py-2 rounded-lg text-md shadow-lg shadow-green-400/80 animate-pulse hover:scale-105 transition cursor-pointer"
-      >
-        Take the Hair Test
-      </button>
+      {/* Right Side Buttons */}
+      <div className="flex items-center gap-4">
+        {/* WhatsApp Icon Button (UI only) */}
+        <button
+          type="button"
+          className="bg-green-500 text-white p-3 rounded-full shadow-lg 
+                     flex items-center justify-center 
+                     hover:scale-110 transition"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp size={22} />
+        </button>
+
+        {/* CTA Button */}
+        <button
+          onClick={() => navigate("/hair-test")}
+          className="bg-green-700 text-green-200 font-bold px-5 py-2 rounded-lg text-md 
+                     shadow-lg shadow-green-400/80 animate-pulse 
+                     hover:scale-105 transition cursor-pointer"
+        >
+          Take the Hair Test
+        </button>
+      </div>
     </nav>
   );
 }
