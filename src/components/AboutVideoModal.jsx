@@ -1,6 +1,9 @@
 import { FaTimes } from "react-icons/fa";
 import { useEffect, useRef } from "react";
-import aboutVideo from "../assets/VideoMotivation.mp4";
+
+// ✅ Cloudinary video URL (no import)
+const aboutVideo =
+  "https://res.cloudinary.com/daknbumls/video/upload/f_auto,q_auto/VideoMotivation_b7kkgl.mp4";
 
 export default function AboutVideoModal({ onClose }) {
   const videoRef = useRef(null);
@@ -41,6 +44,7 @@ export default function AboutVideoModal({ onClose }) {
             autoPlay
             controls
             playsInline
+            preload="metadata"
           />
         </div>
 

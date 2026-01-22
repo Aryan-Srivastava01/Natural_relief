@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
-import owner from "../assets/natural_relief6.mp4";
+
+// ✅ Cloudinary video URL (string, NOT import)
+const ownerVideo =
+  "https://res.cloudinary.com/daknbumls/video/upload/f_auto,q_auto/natural_relief6_fjgprq.mp4";
 
 export default function OwnersMessage() {
   const videoRef = useRef(null);
@@ -7,6 +10,8 @@ export default function OwnersMessage() {
 
   const toggleSound = () => {
     const video = videoRef.current;
+    if (!video) return;
+
     video.muted = !video.muted;
     setIsMuted(video.muted);
   };
@@ -15,7 +20,7 @@ export default function OwnersMessage() {
     <section className="bg-green-50 py-24 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-[2fr_3fr] gap-16 items-center">
 
-        {/* Left Content (smaller) */}
+        {/* Left Content */}
         <div className="max-w-xl">
           <p className="text-green-600 font-semibold mb-4 tracking-wide">
             A MESSAGE FROM OUR FOUNDER
@@ -37,20 +42,18 @@ export default function OwnersMessage() {
           </div>
         </div>
 
-        {/* Right Video (bigger) */}
+        {/* Right Video */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-green-100 h-[420px] md:h-[520px]">
-
           <video
             ref={videoRef}
+            src={ownerVideo}
             autoPlay
             loop
             muted
             playsInline
             preload="metadata"
             className="w-full h-full object-cover"
-          >
-            <source src={owner} type="video/mp4" />
-          </video>
+          />
 
           {/* Sound Toggle */}
           <button
@@ -59,7 +62,6 @@ export default function OwnersMessage() {
           >
             {isMuted ? "🔇 Tap for Sound" : "🔊 Mute"}
           </button>
-
         </div>
 
       </div>
