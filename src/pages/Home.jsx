@@ -7,12 +7,14 @@ import CTA from "../components/Cta";
 import Footer from "../components/Footer";
 import Products from "../components/Products";
 import Contact from "../components/Contact";
+import VideoTestimonials from "../components/VideoTestimonials";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
+      <VideoTestimonials/>
       <Stats />
       <Process />
       <Products />
