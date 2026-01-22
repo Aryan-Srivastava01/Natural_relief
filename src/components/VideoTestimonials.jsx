@@ -9,11 +9,11 @@ import user6 from "../assets/natural_relief6.mp4";
 
 const videos = [
   { name: "Prince Gupta", role: "Owner", src: user6 },
-  { name: "Naman Nair", role: "Verified Customer", src: user2 },
+  { name: "Dhruv Prasad", role: "Verified Customer", src: user2 },
   { name: "Amit Verma", role: "Verified Customer", src: user4 },
-  { name: "Neha Kapoor", role: "Verified Customer", src: user5 },
-  { name: "Karan Singh", role: "Verified Customer", src: user1 },
-  { name: "Abhay Singh", role: "Verified Customer", src: user3 },
+  { name: "Abhay Singh", role: "Verified Customer", src: user5 },
+  { name: "Nidhi Singh", role: "Verified Customer", src: user1 },
+  { name: "Neha Kapoor", role: "Verified Customer", src: user3 },
 ];
 
 export default function VideoTestimonials() {
