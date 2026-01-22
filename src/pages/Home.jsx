@@ -8,17 +8,20 @@ import Footer from "../components/Footer";
 import Products from "../components/Products";
 import Contact from "../components/Contact";
 import VideoTestimonials from "../components/VideoTestimonials";
+import OwnersMessage from "../components/OwnersMessage";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <VideoTestimonials/>
+      <OwnersMessage />
+      
       <Stats />
       <Process />
       <Products />
       <Testimonials />
+      <VideoTestimonials/>
       <CTA />
       <Contact/>
       <Footer />

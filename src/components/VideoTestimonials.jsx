@@ -5,16 +5,15 @@ import user3 from "../assets/natural_relief3.mp4";
 import user4 from "../assets/natural_relief4.mp4";
 import user5 from "../assets/natural_relief5.mp4";
 import user6 from "../assets/natural_relief6.mp4";
-import user7 from "../assets/natural_relief7.mp4";
-import user8 from "../assets/natural_relief8.mp4";
+
 
 const videos = [
-  { name: "Prince Gupta", role: "Owner", src: user8 },
-  { name: "Naman Nair", role: "Verified Customer", src: user1 },
+  { name: "Prince Gupta", role: "Owner", src: user6 },
+  { name: "Naman Nair", role: "Verified Customer", src: user2 },
   { name: "Amit Verma", role: "Verified Customer", src: user4 },
   { name: "Neha Kapoor", role: "Verified Customer", src: user5 },
-  { name: "Karan Singh", role: "Verified Customer", src: user6 },
-  { name: "Abhay Singh", role: "Verified Customer", src: user7 },
+  { name: "Karan Singh", role: "Verified Customer", src: user1 },
+  { name: "Abhay Singh", role: "Verified Customer", src: user3 },
 ];
 
 export default function VideoTestimonials() {
